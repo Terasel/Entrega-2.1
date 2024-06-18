@@ -41,7 +41,9 @@ describe('mòdul debounce', () => {
     debounced();
     jest.advanceTimersByTime(50);
     debounced();
-    jest.advanceTimersByTime(500);
+    jest.advanceTimersByTime(499);
+    expect(callback).not.toBeCalled();
+    jest.advanceTimersByTime(1);
     expect(callback).toBeCalledTimes(1);
   });
   test("la funció debounce es pot activar més d'una vegada", () => {
