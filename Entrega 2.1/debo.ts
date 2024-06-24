@@ -1,4 +1,4 @@
-
+// A ver si va
 export function debounce<T extends Function>(func: T, delay: number): (...args: any[]) => void {
     let timeoutId: ReturnType<typeof setTimeout>;
     return function(this: any, ...args: any[]) {
